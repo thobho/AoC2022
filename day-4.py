@@ -16,9 +16,9 @@ def is_full_overlap(first, second):
     (first_start,first_end) = first
     (second_start,second_end) = second
     
-    is_first_longe_or_equal = first_end - first_start >= second_end - second_start
+    is_first_longer_or_equal = first_end - first_start >= second_end - second_start
 
-    if is_first_longe_or_equal:
+    if is_first_longer_or_equal:
         return first_start <= second_start and first_end >= second_end
     
     return second_start <= first_start and second_end >= first_end
