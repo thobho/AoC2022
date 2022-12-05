@@ -50,7 +50,7 @@ def perform_move(stacks, move):
     return stacks
 # end of part 2
 
-def move(stacks, moves):
+def perform_all_moves(stacks, moves):
     for move in moves:
         stacks = perform_move(stacks, move)
     return stacks
@@ -59,7 +59,7 @@ def extract_tops(stacks):
     tops = [stack[-1] for stack in stacks]
     return ''.join(tops)
 
-move_result = move(stacks, moves)
+move_result = perform_all_moves(stacks, moves)
 tops = extract_tops(move_result)
 
 print(tops)
